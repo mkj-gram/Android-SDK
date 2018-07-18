@@ -15,7 +15,6 @@ import com.vungle.warren.LoadAdCallback;
 import com.vungle.warren.PlayAdCallback;
 import com.vungle.warren.Vungle;
 import com.vungle.warren.VungleNativeAd;
-import com.vungle.warren.Vungle.Consent;
 import com.vungle.warren.error.VungleException;
 
 import java.util.Arrays;
@@ -257,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
                             // Play default placement with ad customization
                             adConfig.setBackButtonImmediatelyEnabled(true);
                             adConfig.setAutoRotate(true);
-                            adConfig.setMuted(false);
+                            adConfig.setMuted(true);
                             // Optional settings for rewarded ads
                             Vungle.setIncentivizedFields("TestUser","RewardedTitle","RewardedBody","RewardedKeepWatching","RewardedClose");
 

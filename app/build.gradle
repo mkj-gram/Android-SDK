@@ -19,11 +19,11 @@ android {
             storePassword 'myStorePassword'
         }
     }
-    compileSdkVersion 27
+    compileSdkVersion 26
     defaultConfig {
         applicationId "com.publisher.vungle.sample"
         minSdkVersion 14
-        targetSdkVersion 27
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -45,15 +45,19 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:appcompat-v7:27.1.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 
     // Vungle SDK
-    compile 'com.github.vungle:vungle-android-sdk:6.2.5';
+
+    compile fileTree(dir: 'libs', include: '*.jar')
     // Optional Google Play Services - Location and Basement
-    compile 'com.google.android.gms:play-services-basement:11.0.4'
-    compile 'com.google.android.gms:play-services-location:11.0.4'
+//    compile 'com.github.vungle:vungle-android-sdk:6.3.7'
+    compile 'com.google.android.gms:play-services-basement:15.0.1'
+    compile 'com.google.android.gms:play-services-ads-identifier:15.0.1'
+
+
 
     // Manual JAR Integration
 //    compile files('libs/vungle-android-sdk-6.2.5.jar')          // Vungle SDK
