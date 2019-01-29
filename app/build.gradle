@@ -11,14 +11,6 @@ buildscript {
 }
 
 android {
-    signingConfigs {
-        release {
-            keyAlias 'MyAndroidKey'
-            keyPassword 'myKeyPassword'
-            storeFile file('keystores/android.jks')
-            storePassword 'myStorePassword'
-        }
-    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.publisher.vungle.sample"
@@ -36,7 +28,7 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
     }
 }
